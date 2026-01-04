@@ -1,0 +1,113 @@
+/* src/app/globals.css */
+
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+}
+
+@layer base {
+  * {
+    @apply border-slate-200 dark:border-slate-800;
+  }
+
+  body {
+    @apply bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl;
+  }
+
+  .animate-in {
+    animation: animate-in 0.2s ease-out;
+  }
+
+  @keyframes animate-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .slide-up {
+    animation: slide-up 0.4s ease-out;
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400 dark:bg-slate-600;
+}
+
+/* Focus visible styles */
+:focus-visible {
+  @apply outline-none ring-2 ring-violet-500 ring-offset-2 ring-offset-white dark:ring-offset-slate-900;
+}
+
+/* Selection styles */
+::selection {
+  @apply bg-violet-200 dark:bg-violet-800 text-violet-900 dark:text-violet-100;
+}
