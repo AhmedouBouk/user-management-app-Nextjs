@@ -1,29 +1,22 @@
-# User Management System - Next.js 14
+# AccountManagementNext
 
 ## Quick Start Commands
 
 ```bash
-# 1. Create the Next.js project
-npx create-next-app@latest user-management --typescript --tailwind --eslint --app --src-dir --import-alias "@/*"
+# 1. Install dependencies
+pnpm install
 
-# 2. Navigate to project
-cd user-management
+# 2. Install additional required packages  
+pnpm add -D @tailwindcss/postcss autoprefixer
 
-# 3. Install dependencies
-npm install prisma @prisma/client bcryptjs jsonwebtoken jose cookies-next lucide-react
-npm install -D @types/bcryptjs @types/jsonwebtoken
-
-# 4. Initialize Prisma
-npx prisma init
-
-# 5. After adding schema, run migrations
+# 3. Run database migration
 npx prisma migrate dev --name init
 
-# 6. Seed the database (creates admin user)
+# 4. Seed the database (creates admin user)
 npx prisma db seed
 
-# 7. Start development server
-npm run dev
+# 5. Start development server
+pnpm run dev
 ```
 
 ## Project Structure
@@ -99,16 +92,16 @@ JWT_SECRET=your-super-secret-jwt-key-change-in-production
 
 ## Features
 
-- ✅ JWT-based authentication
-- ✅ User registration & login
-- ✅ Protected routes (middleware)
-- ✅ User dashboard with profile info
-- ✅ Admin panel for user management
-- ✅ CRUD operations for users
-- ✅ Role-based access control
-- ✅ Dark/Light mode toggle
-- ✅ Responsive design
-- ✅ Modern UI with Tailwind CSS
+- JWT-based authentication
+- User registration & login
+- Protected routes (middleware)
+- User dashboard with profile info
+- Admin panel for user management
+- CRUD operations for users
+- Role-based access control
+- Dark/Light mode toggle
+- Responsive design
+- Modern UI with Tailwind CSS
 
 ## Default Admin Credentials
 

@@ -124,20 +124,7 @@ export default function LoginPage() {
           </p>
         </div>
 
-        {/* Demo credentials */}
-        <div className="mt-6 p-4 rounded-xl bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
-          <p className="text-xs text-slate-500 dark:text-slate-400 mb-2 font-medium">
-            Demo Admin Credentials:
-          </p>
-          <div className="flex flex-wrap gap-2 text-xs">
-            <code className="px-2 py-1 rounded bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300">
-              admin@example.com
-            </code>
-            <code className="px-2 py-1 rounded bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300">
-              1234
-            </code>
-          </div>
-        </div>
+        
       </Card>
     </div>
   );

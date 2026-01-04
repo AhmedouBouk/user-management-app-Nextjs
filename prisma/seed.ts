@@ -20,7 +20,7 @@ async function main() {
     },
   });
 
-  console.log('✅ Admin user created:', admin.email);
+  console.log('Admin user created:', admin.email);
 }
 
 main()
